@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,48 @@
         .fa-youtube { color: #bb0000; }
         .social-icon { font-size: 24px; transition: opacity 0.2s; }
         .social-icon:hover { opacity: 0.7; }
+        .pub-links {
+          margin-top: 6px;
+        }
         
+        .pub-links .btn {
+          display: inline-block;
+          padding: 4px 10px;
+          margin-right: 6px;
+          margin-bottom: 4px;
+          font-size: 0.85rem;
+          font-weight: 500;
+          border-radius: 6px;
+          border: none;
+          cursor: pointer;
+          text-decoration: none;
+          color: white;
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        
+        /* Individual colors */
+        .pub-links .paper {
+          background-color: #2563eb; /* blue */
+        }
+        
+        .pub-links .abstract {
+          background-color: #059669; /* green */
+        }
+        
+        .pub-links .project {
+          background-color: #7c3aed; /* purple */
+        }
+        
+        .pub-links .bibtex {
+          background-color: #ea580c; /* orange */
+        }
+        
+        /* Hover effect */
+        .pub-links .btn:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
         .hidden { display: none; }
     </style>
 </head>
@@ -146,10 +188,10 @@
                     </div>
 
                     <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2512.20236" target="_blank">[Paper]</a>
-                        <button onclick="toggleAbstract()">[Abstract]</button>
-                        <a href="https://indicdlp.github.io/" target="_blank">[Project Page]</a>
-                        <button onclick="toggleBibtex()">[BibTeX]</button>
+                      <a class="btn paper" href="https://arxiv.org/abs/2512.20236" target="_blank">Paper</a>
+                      <button class="btn abstract" onclick="toggleAbstract()">Abstract</button>
+                      <a class="btn project" href="https://indicdlp.github.io/" target="_blank">Project Page</a>
+                      <button class="btn bibtex" onclick="toggleBibtex()">BibTeX</button>
                     </div>
 
                     <!-- Hidden Abstract Section -->
@@ -162,7 +204,7 @@
                         <button class="absolute top-2 right-2 text-blue-600 hover:text-blue-800" onclick="copyBib()">Copy</button>
                         <pre id="bibtex" class="whitespace-pre-wrap">@inproceedings{nath2025indicdlp,
   title={IndicDLP: A Foundational Dataset for Multi-lingual and Multi-domain Document Layout Parsing},
-  author={Nath, Om and Kukkala, Sahithi and Sarvadevabhatla, Ravi Kiran},
+  author={Oikantik Nath, Sahithi Kukkala, Mitesh Khapra, Ravi Kiran Sarvadevabhatla},
   booktitle={Proceedings of the International Conference on Document Analysis and Recognition (ICDAR)},
   year={2025}
 }</pre>
